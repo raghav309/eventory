@@ -1,0 +1,170 @@
+$accent-color: #12daa8;
+$bg-color: #000000;
+
+header {
+    position: sticky;
+    top: 0;
+    background: $bg-color;
+    z-index: 2;
+}
+
+.header-sec {
+    padding: 12px 0px;
+    max-width: 1228px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-btns {
+    display: flex;
+    justify-content: space-between;
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn {
+    &:hover {
+        cursor: pointer;
+    }
+
+    &>img {
+        height: 42px;
+        width: 42px;
+    }
+}
+
+.brand-name {
+    padding: 0px 8px;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &>span {
+        color: #12daa8;
+    }
+}
+
+.header-btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-btn {
+    &:hover {
+        cursor: pointer;
+    }
+
+    &>img {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+.address-input {
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    & img {
+        margin: 4px;
+        height: 16px;
+        width: 16px;
+    }
+}
+
+.lg-header-btns {
+    display: none;
+}
+
+.header-search {
+    padding: 0px 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    background: white;
+    border-radius: 12px;
+}
+
+.header-search-btn {
+    padding: 4px;
+
+    &>img {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+.header-search-input {
+    padding: 12px 0px;
+    width: 100%;
+
+    font-size: 1.1rem;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-sec {
+        padding: 20px 16px;
+
+        background: $bg-color;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .brand-name {
+        font-size: 3.4rem;
+    }
+
+    .header-btns {
+        display: none;
+    }
+
+    .lg-header-btns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .header-search {
+        max-width: 464px;
+        margin: 0px 48px;
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-brand {
+        flex-direction: row-reverse;
+        gap: 40px;
+    }
+}
+
+@media (min-width: 1180px) {
+    .header-sec {
+        margin: 0px auto;
+    }
+}
