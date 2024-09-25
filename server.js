@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/", (req, res) => {
-    res.send("hello world");
+    res.render("/pages/index");
 });
 
 app.listen(5000, () => {
