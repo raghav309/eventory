@@ -2,6 +2,7 @@ var path = require('path')
 const express = require('express')
 const cors = require('cors')
 
+const MainRouter = require('./app/routes/main.routes')
 const app = express()
 
 app.engine('.html', require('ejs').__express)
@@ -11,9 +12,7 @@ app.use(express.static(path.join(__dirname, '/app/assets/')))
 app.use(cors())
 app.use(express.json())
 
-app.use('/', (req, res) => {
-    res.render('pages/index')
-})
+app.use('/', MainRouter)
 
 app.listen(5000, () => {
     console.log(`server is listening...`)
