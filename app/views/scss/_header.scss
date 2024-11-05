@@ -168,3 +168,314 @@ header {
         margin: 0px auto;
     }
 }
+
+/****************   MENUS   ****************/
+.backdrop {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #353435d2;
+    display: none;
+    z-index: 8;
+}
+
+/****************   nav menu    ****************/
+.menu-sec {
+    height: 100vh;
+    width: 70vw;
+    position: fixed;
+    top: 0;
+    left: -70vw;
+    background: #191919;
+    box-shadow: 0 0 11px 6px rgba(0, 0, 0, 0.17);
+    transition: left 0.3s ease-in-out;
+    transition: display 0s ease-in;
+    display: none;
+    z-index: 9;
+}
+
+.menu-title {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    background: #353535;
+}
+
+.menu-list {
+    padding-left: 24px;
+}
+
+.menu-listItem {
+    transition: all 200ms ease-in;
+    overflow: hidden;
+
+    &:hover {
+        background: #12daa8;
+    }
+}
+
+.menu-listItem > a {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+
+    & p {
+    }
+
+    & img {
+        margin-left: 8px;
+        height: 16px;
+        width: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .backdrop {
+        position: absolute;
+        top: 68px;
+        right: 0px;
+        width: 100%;
+    }
+
+    .menu-sec {
+        position: absolute;
+        height: fit-content;
+        width: 278px;
+        top: 68px;
+        left: 0px;
+    }
+
+    .menu-list {
+        padding: 0px;
+    }
+
+    .account-menu-ctrl-btn {
+        display: none;
+    }
+}
+
+/****************   accounts menu   ****************/
+.account-menu-container {
+    position: fixed;
+    top: 0px;
+    right: -400px;
+    height: 100%;
+    width: 400px;
+    z-index: 9;
+
+    background: #191919;
+    box-shadow: 0 0 11px 6px rgba(0, 0, 0, 0.17);
+    transition: right 0.3s ease-in-out;
+}
+
+.show-menu {
+    left: 0px;
+}
+
+.account-menu-title {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background: #353535;
+
+    & > p {
+        font-size: 1.1rem;
+    }
+}
+
+.account-menu-ctrl-btn {
+    & > img {
+        height: 28px;
+        width: 28px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.account-menu {
+}
+
+.account-menu-item {
+    padding: 16px 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.menu-item-icon {
+    & > img {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+.menu-item-name {
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.menu-item-description {
+    font-size: 0.8rem;
+}
+
+/****************   DIALOG   ****************/
+.dialogBackdrop {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 8;
+
+    background: #353435d2;
+}
+
+/****************   SIGNIN DIALOG   ****************/
+.signinDialog {
+    padding: 3rem 4rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    background: #191919;
+    color: white;
+}
+
+.closeDialogBtn {
+    margin: 4px;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: fit-content;
+    border-radius: 50%;
+
+    &:hover {
+        background: #353535;
+    }
+
+    & > img {
+        height: 28px;
+        width: 28px;
+    }
+}
+
+.signinDialog-header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid white;
+    border-radius: 4px;
+
+    & > p {
+        margin: 0px auto;
+        padding: 1rem;
+        width: 50%;
+        text-align: center;
+    }
+
+    & > p + p {
+        border-left: 1px solid white;
+    }
+
+    & > span {
+        margin: 0px auto;
+        padding: 4px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        background: #000000;
+        border: 1px solid white;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+}
+
+.signinForm {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-emailInput {
+        margin: 1rem 0;
+        padding: 1rem 0.5rem;
+        width: 100%;
+
+        font-size: 1.2rem;
+        color: white;
+        caret-color: white;
+        border: 1px solid white;
+        border-radius: 4px;
+        background: transparent;
+    }
+
+    &-rememberLabel {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &-rememberInput {
+        height: 20px;
+        width: 20px;
+    }
+
+    &-termsAndConditions {
+        margin: 1rem 0;
+
+        & a {
+            color: #12daa8;
+        }
+    }
+
+    &-submitBtn {
+        padding: 1rem;
+        width: 100%;
+
+        font-size: 1.025rem;
+        font-weight: 600;
+        text-align: center;
+        background: #12daa8;
+        border: none;
+        border-radius: 4px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
