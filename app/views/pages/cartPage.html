@@ -1,0 +1,51 @@
+<html lang="en"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croma</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body style="background: #f9f9f9;">
+    <%- include("../components/header.html") %>
+
+    <div class="cart">
+        <div class="cartTitle">your cart</div>
+
+        <div class="cartBody">
+            <div class="cartList">
+                <%- include("../components/cartItem.html", name = ["watch", "phone", "tablet", "largeDevie"]) %>
+            </div>
+
+            <div class="cartSummary">
+                <div class="cartSummaryTitle">
+                    Order Summary ( 1 item )
+                </div>
+
+                <ul class="cartSummaryList">
+                    <li class="cartSummaryList-item">
+                        <p>Original Price</p>
+                        <p>₹999.0</p>
+                    </li>
+                    <li class="cartSummaryList-item">
+                        <p>Total</p>
+                        <p>₹999.0</p>
+                    </li>
+                </ul>
+
+                <div class="cartCheckoutBtn">
+                    Checkout
+                </div>
+            </div>
+
+            <!-- <div class="cartFooter">
+
+            </div> -->
+        </div>
+    </div>
+
+    <script type="module" src="/scripts/header.js"></script>
+</body>
+
+</html>

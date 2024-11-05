@@ -1,0 +1,225 @@
+.cart {
+    margin: 0px auto;
+    padding: 0px 12px;
+    max-width: 1228px;
+
+    background: #f9f9f9;
+}
+
+.cartTitle {
+    margin: 2rem 0px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cartBody {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cartList {
+}
+
+/****************   CART ITEM    ****************/
+.cartItem {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    background: #ffffff;
+    border-radius: 8px;
+
+    & + & {
+        margin-top: 2rem;
+    }
+}
+
+.cartItem-thumbnail {
+    margin: auto 0;
+    flex: 1 2 25%;
+    height: fit-content;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.cartItem-details {
+    flex: 1 2 55%;
+}
+
+.cartItem-title {
+    font-size: 1.2rem;
+    font-weight: 450;
+    line-height: 1.3rem;
+}
+
+.cartItem-ratings {
+    margin: 1rem 0;
+}
+
+.cartItem-pricesMd {
+    flex: 1 1 20%;
+}
+
+.itemSP {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.itemSPLabel {
+    font-size: 0.9rem;
+}
+
+.itemBeforeDiscount {
+    margin-top: 0.5rem;
+    display: inline-block;
+
+    text-decoration-line: line-through;
+}
+
+.itemDiscountAmount {
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #9a9a9a;
+}
+
+.cartItem-btns {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.cartItem-btn {
+    padding: 0.5rem 2rem;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 8px;
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid #12daa8;
+    }
+}
+
+.cartItem-pricesLg {
+    padding-left: 1rem;
+    flex: 1 1 20%;
+    text-align: right;
+    display: none;
+}
+
+/****************   CART SUMMARY    ****************/
+.cartSummary {
+    padding: 1rem;
+    width: 30%;
+    height: fit-content;
+    width: 100%;
+    position: sticky;
+
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.cartSummaryTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cartSummaryList {
+    padding: 1rem 0px;
+    list-style: none;
+}
+
+.cartSummaryList-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & + & {
+        margin-top: 0.6rem;
+    }
+}
+
+.cartCheckoutBtn {
+    padding: 8px 0px;
+    width: 100%;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    background: #12daa8;
+    border-radius: 8px;
+
+    &:hover {
+        cursor: pointer;
+        background: #00b594;
+    }
+}
+
+/****************   MEDIAQ    ****************/
+@media screen and (min-width: 360px) {
+}
+
+@media screen and (min-width: 768px) {
+    .cartItem-pricesMd {
+        display: none;
+    }
+
+    .cartItem-pricesLg {
+        display: block;
+    }
+
+    .itemSP {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .itemSPLabel {
+        margin: 0.5rem 0rem;
+        font-weight: 300;
+    }
+
+    .itemBeforeDiscount {
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid black;
+
+        text-decoration-line: line-through;
+    }
+
+    .itemDiscountAmount {
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid black;
+        font-size: 0.8rem;
+        color: #9a9a9a;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cartBody {
+        flex-direction: row;
+    }
+
+    .cartList {
+        width: 70%;
+    }
+
+    .cartSummary {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+}
+
+/* checkout footer btn below 1024px*/
