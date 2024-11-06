@@ -1,0 +1,48 @@
+.brandCarousal {
+    margin: 1rem auto;
+    padding: 0px 12px;
+    max-width: 1228px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    &-Btn {
+        margin: auto 0px;
+        padding: 8px;
+        height: 100%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: #393939;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & > img {
+            height: 24px;
+            width: 24px;
+            display: block;
+        }
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    &-item {
+        height: 8rem;
+        width: 20%;
+
+        & img {
+            width: 100%;
+            display: block;
+
+            border-radius: 8px;
+        }
+    }
+}

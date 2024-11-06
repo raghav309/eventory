@@ -1,0 +1,23 @@
+<div class="brandCarousal">
+    <div class="brandCarousal-Btn">
+        <img
+            src="/icons/arrow-left.svg"
+            alt=""
+        />
+    </div>
+
+    <ul class="brandCarousal-list">
+        <% for(let i = 1; i < 6; i++) { %>
+        <li class="brandCarousal-item">
+            <a href=""><img src=<%= "/img/" + i + "_brand.webp" %> alt=""></a>
+        </li>
+        <% } %>
+    </ul>
+
+    <div class="brandCarousal-Btn">
+        <img
+            src="/icons/arrow-right.svg"
+            alt=""
+        />
+    </div>
+</div>
