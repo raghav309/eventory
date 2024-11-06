@@ -1,0 +1,273 @@
+$grey-border: 1px solid #353535;
+
+.product-details {
+    margin: 0px auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.product-hero {
+    height: fit-content;
+}
+
+.productThumbnail-list {
+    display: none;
+}
+
+.productThumbnail-listItem {
+    margin: 12px 0px;
+    padding: 4px;
+    height: 100px;
+    width: 100px;
+    border: $grey-border;
+    border-radius: 4px;
+    transition: all 200ms ease-in;
+
+    &:hover {
+        cursor: pointer;
+        border: 3px solid #12daa8;
+    }
+
+    & > img {
+        width: 100%;
+    }
+}
+
+.thumbnail-active {
+    border: 3px solid #12daa8;
+}
+
+.product-img-container {
+}
+
+.product-reaction-btns {
+    margin-left: auto;
+    width: fit-content;
+}
+
+.product-reaction-btn {
+    padding: 8px;
+    display: inline-block;
+
+    & > img {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+.product-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 320px;
+    }
+}
+
+.product-img-btn {
+    padding: 8px;
+    background: #353535;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    & > img {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+.product-img-indicator {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+
+    & span {
+        margin: 0px 4px;
+        height: 8px;
+        width: 8px;
+        display: inline-block;
+        background: #ababab;
+        border-radius: 50%;
+    }
+}
+
+.product-compare-sec {
+}
+
+.product-description {
+    color: white;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.product-rating-and-review {
+    margin-top: 4px;
+    color: #12daa8;
+
+    & a {
+        color: inherit;
+    }
+}
+
+.product-price-sec {
+    margin: 24px 0px;
+    display: flex;
+
+    & span {
+        margin: 0px 36px;
+        padding: 12px;
+        text-transform: uppercase;
+        line-height: 1;
+        border: 1px solid #999;
+        border-radius: 4px;
+    }
+}
+
+.selling-price {
+    & > *:first-child {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+
+.emi-price {
+    & > p {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    & a {
+        color: #12daa8;
+    }
+}
+
+.product-features-selection {
+}
+
+.product-feature {
+    & + & {
+        margin-top: 16px;
+    }
+}
+
+.product-feature-name {
+}
+
+.product-feature-options {
+    margin: 8px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-feature-option {
+    padding: 8px 16px;
+    border: $grey-border;
+    border-radius: 4px;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background: #49a5a2;
+    }
+}
+
+.product-key-features {
+    margin: 24px 0px;
+    border: $grey-border;
+    border-radius: 4px;
+
+    & > p {
+        padding: 16px 16px 0px;
+    }
+}
+
+.product-key-features-list {
+    padding: 16px 32px;
+}
+
+.product-key-feature {
+    padding: 2px;
+}
+
+@media screen and (min-width: 768px) {
+    .product-details {
+        flex-direction: row;
+    }
+
+    .product-hero {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        position: sticky;
+        top: 87px;
+    }
+
+    .productThumbnail-list {
+        width: 20%;
+        display: block;
+    }
+
+    .product-hero {
+        width: 80%;
+    }
+}
+
+/*****     COLLABSIBlE SECTION     *****/
+.collapsible-sec {
+    color: white;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+.collapsible-sec + .collapsible-sec {
+    margin-top: 16px;
+}
+
+.collapsible-header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 8px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.collapsible-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.collapsible-arrow-icon {
+    & > img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.collapsible-body {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.25s ease-in-out;
+
+    & > p {
+        padding: 0px 24px;
+    }
+}
