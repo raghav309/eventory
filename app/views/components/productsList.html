@@ -1,0 +1,67 @@
+<div class="product-list-title">
+    <h1>Results for "iphone"</h1>
+    <!--  include("./components/sort-filter.html") -->
+</div>
+
+<div
+    class="product-list"
+    id="ProductList"
+>
+    <% for(let i = 0; i < 9; i++) { %>
+    <div class="product-card">
+        <div class="product-card-hero">
+            <img
+                src="/img/300652_0_ncocr2.webp"
+                alt=""
+            />
+            <div class="compare-tag">
+                <img
+                    src="/icons/checkbox.svg"
+                    alt=""
+                />
+                <p>Compare</p>
+            </div>
+            <div class="like-tag">
+                <img
+                    src="/icons/heart.svg"
+                    alt=""
+                />
+            </div>
+        </div>
+
+        <div class="product-card-detail">
+            <p class="product-title">Apple iPhone 15(128GB, black)</p>
+            <div class="product-rating">
+                <span>3.4</span>
+                <img
+                    src="/icons/star-filled-rate-rating.svg"
+                    alt=""
+                />
+                (68)
+            </div>
+            <p class="product-price">&#8377; 71,290</p>
+            <p class="product-discount">
+                <span class="before-discount">&#8377; 79990</span>
+                <span class="discount-amount">(Save &#8377;86610)</span>
+                <span class="discount-percent">11%off</span>
+            </p>
+            <p class="product-delivery-time">
+                <img
+                    src="/icons/delivery-van.svg"
+                    alt=""
+                />
+                Standard Delivery by Mon, 9th Sep
+            </p>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+<div class="LoadProduct-btnSec">
+    <div
+        class="LoadProduct-btn"
+        id="loadProduct-btn"
+    >
+        <p>View more</p>
+    </div>
+</div>
