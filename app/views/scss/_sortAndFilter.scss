@@ -1,0 +1,98 @@
+/*
+    this style could be reused for buy and add-to-cart buttons
+*/
+
+.product-list-title {
+    margin: 0px auto;
+    padding: 20px 20px 0px;
+    max-width: 1228px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & h1 {
+        color: white;
+    }
+}
+
+.lg-sort-filter {
+    display: none;
+}
+
+.lg-btn {
+    padding: 8px 16px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4px;
+
+    background: #393939;
+    border-radius: 8px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    & img {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    & p {
+        color: white;
+    }
+
+    & + & {
+        margin-left: 8px;
+    }
+}
+
+/****************   Mobile sort and filter footer   ****************/
+.mb-sort-filter {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    background: #393939;
+    z-index: 1;
+}
+
+.mb-btn {
+    padding: 16px 0px;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & > div > img {
+        margin-right: 8px;
+        height: 24px;
+        width: 24px;
+    }
+
+    & > div > p {
+        font-weight: 600;
+    }
+}
+
+.mb-btn + .mb-btn {
+    border-left: 1px solid white;
+}
+
+@media (min-width: 1024px) {
+    .mb-sort-filter {
+        display: none;
+    }
+
+    .lg-sort-filter {
+        display: block;
+    }
+}
