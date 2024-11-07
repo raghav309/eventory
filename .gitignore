@@ -1,3 +1,5 @@
 node_modules/
+app/assets/img
 app/assets/style.css
 app/assets/style.css.map
+.env
