@@ -3,6 +3,8 @@ const express = require('express')
 const cors = require('cors')
 
 const MainRouter = require('./app/routes/main.routes')
+const UserRouter = require('./app/routes/user.routes')
+
 const app = express()
 
 app.engine('.html', require('ejs').__express)
@@ -13,6 +15,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/', MainRouter)
+app.use('/api/user', UserRouter)
 
 app.listen(5000, () => {
     console.log(`server is listening...`)
