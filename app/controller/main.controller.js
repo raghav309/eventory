@@ -14,4 +14,29 @@ const getSignupPage = (req, res) => {
     res.render('pages/signupPage')
 }
 
-module.exports = { getHomePage, getLoginPage, getSignupPage, getCartPage }
+const getProductSearchPage = (req, res) => {
+    res.render('pages/productSearchPage')
+}
+
+const getProductDetailsPage = (req, res) => {
+    res.render('pages/productDetailsPage')
+}
+
+const getAccountPage = (req, res) => {
+    res.render('pages/accountPage')
+}
+
+const getUpdateAccountPage = (req, res) => {
+    res.render('pages/updateAccountPage')
+}
+
+module.exports = {
+    getHomePage,
+    getLoginPage,
+    getSignupPage,
+    getCartPage,
+    getProductSearchPage,
+    getProductDetailsPage,
+    getAccountPage,
+    getUpdateAccountPage,
+}
