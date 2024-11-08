@@ -1,0 +1,24 @@
+.updateAccountContainer {
+    padding: 0rem 1rem;
+}
+
+.updateAccountForm {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+        margin-bottom: 0.25rem;
+        font-size: 0.8rem;
+        color: white;
+    }
+
+    & input {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+
+        &:focus {
+            border: none;
+        }
+    }
+}
