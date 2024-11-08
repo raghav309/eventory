@@ -1,6 +1,9 @@
+const validator = require('validator')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 const User = require('../models/user.model')
 
-const loginUser = async (req, res) => {
+const signupUser = async (req, res) => {
     const { email, password } = req.body
 
     try {
@@ -29,7 +32,7 @@ const loginUser = async (req, res) => {
     }
 }
 
-const signupUser = async (req, res) => {
+const loginUser = async (req, res) => {
     const { email, password } = req.body
 
     try {

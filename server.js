@@ -15,6 +15,10 @@ app.set('view engine', 'html')
 app.use(express.static(path.join(__dirname, '/app/assets/')))
 app.use(express.json())
 
+app.use((req, res, next) => {
+    console.log(req.path + ' ' + req.method + ' ' + req.body)
+    next()
+})
 app.use('/', MainRouter)
 app.use('/api/user', UserRouter)
 
