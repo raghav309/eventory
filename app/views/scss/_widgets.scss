@@ -1,0 +1,15 @@
+/*
+    btns on update account page breaks at 1024px
+*/
+
+@mixin btn-mixin($bg, $color) {
+    padding: 1rem 1.5rem;
+    width: fit-content;
+    font-weight: 600;
+
+    background: $bg;
+    color: $color;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: 1px solid $color;
+}
