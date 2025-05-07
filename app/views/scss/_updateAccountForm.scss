@@ -1,24 +1,54 @@
-.updateAccountContainer {
-    padding: 0rem 1rem;
-}
+@use 'widgets';
 
-.updateAccountForm {
-    display: flex;
-    flex-direction: column;
+.updateAccount {
+    &Container {
+        padding: 0rem 1rem;
+    }
 
-    & label {
-        margin-bottom: 0.25rem;
-        font-size: 0.8rem;
+    &Title {
         color: white;
     }
 
-    & input {
-        margin-bottom: 1rem;
-        padding: 1rem;
-        border-radius: 8px;
+    &Form {
+        display: flex;
+        flex-direction: column;
 
-        &:focus {
-            border: none;
+        & label {
+            margin-bottom: 0.25rem;
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        & input {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+
+            &:focus {
+                border: none;
+            }
+        }
+
+        &-btns {
+            margin: 0rem auto;
+        }
+
+        &-btn {
+            padding: 1rem 1.5rem;
+            width: fit-content;
+            box-sizing: content-box;
+
+            font-weight: 600;
+            background: #191919;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 8px;
+            border: 1px solid white;
+        }
+
+        &-btnSolid {
+            color: #191919;
+            background: #12daa8;
         }
     }
 }
