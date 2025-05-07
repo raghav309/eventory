@@ -25,6 +25,26 @@
     box-sizing: border-box;
 }
 
+:root {
+    --accent: hsl(165, 84.75%, 46.27%); /* #12daa8 hyperlink */
+    --accent-dark: hsl(165.48, 88.57%, 27.45%);
+    --accent-light: hsl(165, 100%, 90.59%);
+    --accent-neon-green: hsl(169.18, 100%, 45.69%); /* #00e9bf */
+
+    --grey-1: hsl(0, 0%, 60.39%); /* #9a9a9a old price */
+    --grey-2: hsl(0, 0%, 50.2%); /* #808080 circle */
+    --grey-3: hsl(0, 0%, 22.35%);
+    --grey-4: hsl(0, 0%, 20.78%); /* border color */
+    --grey-5: hsl(0, 0%, 20%); /* #333 input */
+
+    --dark-1: hsl(0, 0%, 11.37%); /* #1d1d1d footer color */
+    --dark-2: hsl(0, 0%, 9.8%); /* #191919 croma wall*/
+    --dark-3: hsl(0, 0%, 7.06%); /* #121212 text color black*/
+
+    --cart-bg: hsl(0, 0%, 97.65%);
+    --text-color: hsl(0, 0%, 100%); /* #fff text color light*/
+}
+
 body {
     padding: 0px;
     font-family: 'Roboto';
