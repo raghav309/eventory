@@ -9,8 +9,8 @@ header {
 }
 
 .header-sec {
-    padding: 12px 0px;
-    max-width: 1228px;
+    padding: 12px 14px;
+    max-width: 1154px;
 
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@ header {
 
 @media (min-width: 768px) {
     .header-sec {
-        padding: 20px 16px;
+        padding: 20px 14px;
 
         background: $bg-color;
 
@@ -166,9 +166,9 @@ header {
 @media (min-width: 1180px) {
     .header-sec {
         margin: 0px auto;
+        padding: 20px 0px;
     }
 }
-
 /****************   MENUS   ****************/
 .backdrop {
     height: 100vh;
