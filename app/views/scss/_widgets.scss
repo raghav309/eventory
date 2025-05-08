@@ -2,14 +2,45 @@
     btns on update account page breaks at 1024px
 */
 
-@mixin btn-mixin($bg, $color) {
-    padding: 1rem 1.5rem;
-    width: fit-content;
-    font-weight: 600;
+@mixin btn-mixin($width: fit-content, $color: var(--dark-3), $bgColor: transparent, $border) {
+    padding: 0.5rem 2rem;
+    width: $width;
 
-    background: $bg;
+    font-weight: 700;
+    font-size: 14px;
+    background: $bgColor;
     color: $color;
-    text-transform: uppercase;
     border-radius: 8px;
-    border: 1px solid $color;
+    border: $border;
+}
+
+.btn-light {
+    @include btn-mixin($color: var(--dark-3), $border: var(--border-light));
+
+    &:hover {
+        cursor: pointer;
+        border: var(--border-accent);
+    }
+}
+
+.btn-dark {
+    @include btn-mixin($color: var(--text-color), $border: var(--border-dark));
+}
+
+.btn-primary {
+    @include btn-mixin($color: var(--dark-3), $bgColor: var(--accent), $border: none);
+}
+
+.btn-primary-stretched {
+    @include btn-mixin(
+        $width: 100%,
+        $color: var(--dark-3),
+        $bgColor: var(--accent),
+        $border: var(--border-accent)
+    );
+
+    &:hover {
+        cursor: pointer;
+        border: var(--border-light);
+    }
 }
